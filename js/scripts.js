@@ -168,19 +168,56 @@ console.log(string !== number);
 
 //try it out day 3
 //Asks for the user's age using the Date object.
-var userAge = confirm('Are you over 18?');
-//if the user is over 18, allow them to proceed, otherwise alert the user that they are not old enough.
-if(userAge == true) {
-  underEighty= confirm("Are you under 80 years old?");
-if(underEighty) {
-  var xWing = confirm("Do you like Star Wars?");
-  if(xWing) {
-    alert("yeah boi");
-    }
-} else {
-  //Do you like prunes?
-  confirm("Do you like prunes?");
-    }
-} else {
-  prompt('enjoy your childhood');
+// var userAge = confirm('Are you over 18?');
+// //if the user is over 18, allow them to proceed, otherwise alert the user that they are not old enough.
+// if(userAge == true) {
+//   underEighty= confirm("Are you under 80 years old?");
+// if(underEighty) {
+//   var xWing = confirm("Do you like Star Wars?");
+//   if(xWing) {
+//     alert("yeah boi");
+//     }
+// } else {
+//   //Do you like prunes?
+//   confirm("Do you like prunes?");
+//     }
+// } else {
+//   prompt('enjoy your childhood');
+// }
+
+//-------------------take home ----------------------------------
+var favColor = prompt('What is your favorite color?', 'There are only nine options:red, orange, yellow, green, blue, pink, purple, black, white, and grey');
+switch (favColor = favColor.toLowerCase()) {
+	case 'red':
+		alert("wow, the color of kylo's saber");
+		break;
+	case 'orange':
+		alert('this reminds me of a popsicle, good choice');
+		break;
+	case 'yellow':
+		alert('ya like the beatles?');
+		break;
+	case 'green':
+		alert('environmentalist goodness');
+		break;
+	case 'blue':
+		alert("abididiebidbinsi... also reminds me of baseball bros");
+		break;
+	case 'pink':
+		alert('harry styles realness');
+		break;
+	case 'purple':
+		alert("also MY favorite color. homies for life.");
+		break;
+	case 'black':
+		alert('true goths only, rock on');
+		break;
+	case 'white':
+		alert("this is a very vanilla choice - no pun intended - but hey, you do you");
+		break;
+	case 'grey':
+		alert('the color of wisdom');
+		break;
+	default:
+		alert('Please follow my rules');
 }
