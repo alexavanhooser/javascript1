@@ -166,3 +166,52 @@ function calcLifetimeSupplyWithMaxAge(age, perDay, ageOfDeath) {
 var death = prompt("How old will you be doe?");
 
 calcLifetimeSupplyWithMaxAge(age, daily, death);
+
+
+
+
+//---------------take home section---------------------------
+//Take a number and return the square of that number (power of 2).
+var square = prompt("hmu with a number");
+function calc(n) {
+  if(!isNaN(parseInt(n))) {
+    console.log(Math.pow(n,2));
+  } else {
+    alert(NaN);
+    var diffNum = prompt('Enter a new number');
+    calc(diffNum);
+  }
+};
+
+calc(square);
+//If a non-number argument is passed into the function, alert NaN and prompt for another response
+
+
+//In a second function, capitalize the first letter of a string and add a period (.) to the end of the string if it doesn't already end with a period
+var capFirst = prompt('Throw in a sentence boi');
+function takeString(s) {
+  s = s.toString();
+  let newString = s.charAt(0).toUpperCase() + s.slice(1); //.charAt takes whatever index you pass into it and gives back letter
+  if(s.charAt(s.length-1) === '.') { //have to account for the 0. string.anything casts it to an array. substracting gives last member
+    console.log(newString);
+  } else {
+    newString += '.';
+    console.log(newString);
+  }
+}
+//Create a string that will flip the position of the first and second half of a string. For example, the string “abcdef” would be returned as “defabc”. Hint: use substring.
+takeString(capFirst);
+function flipZaHalf(a) {
+var index = Math.rounf(a.length / 2);
+return a.substring(index) + a.slice(0, index);
+}
+
+//BONUS:  write a function that checks if a given string is a palindrome.
+var palindrome(s) {
+  var reverseIt = s.split('').reverse().join('');
+  if(s == reverseIt) {
+    return true;
+  } else {
+    return false;
+  }
+}
