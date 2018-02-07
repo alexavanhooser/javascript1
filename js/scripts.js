@@ -208,10 +208,13 @@ return a.substring(index) + a.slice(0, index);
 
 //BONUS:  write a function that checks if a given string is a palindrome.
 var palindrome(s) {
-  var reverseIt = s.split('').reverse().join('');
+  var reverseIt = s.split('').reverse().join(''); //split asks which character you want to split it by
+                                                 // splitting by an empty string takes each letter
   if(s == reverseIt) {
     return true;
   } else {
     return false;
   }
 }
+
+console.log(isPalindrome(square));
