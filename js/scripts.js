@@ -202,7 +202,7 @@ function takeString(s) {
 //Create a string that will flip the position of the first and second half of a string. For example, the string “abcdef” would be returned as “defabc”. Hint: use substring.
 takeString(capFirst);
 function flipZaHalf(a) {
-var index = Math.rounf(a.length / 2);
+var index = Math.round(a.length / 2);
 return a.substring(index) + a.slice(0, index);
 }
 
