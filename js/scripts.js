@@ -91,9 +91,49 @@ myKey.addEventListener('keydown', function(e){
   }
 });
 
+//--------------------------try it out---------------------------------------
+//On your day6 branch, create a basic HTML mockup with a button, a div with some height and background color, and an h1 with some text
+//Create event listeners for each:
+var myDiv = document.querySelector('.my-div'),
+myButton = document.querySelector('button'),
+myTitle = document.querySelector('.my-title');
+
+//For the button, alert the user with a message when they click it.
+myButton.addEventListener("click", () => {
+  alert("wassup");
+});
+//click = arg1, () => = arg2, alert() also equals arg2.
+
+//For the div, change the color of the background when their mouse goes into the div.
+color = ["blue", "green", "black", "purple", "yellow"];
+
+//more dynamic version:
+myDiv.addEventListener('mouseenter', function(e){
+  e.target.style.backgroundColor = "randomColor(0, color.length - 1);"//highest possible index is array -1
+});
+
+//fancy statistics version
+function randomColor(min, max) {
+  var num = Math.round //yea boi
+  (
+    //Math.random will give you a random integer btwn 0 and 1, multiplying
+    //by the mathematical equation rounds it and gives you a whole # (this is the section above labeled "yea boi")
+    Math.random() *
+    (max - min) + min);
+  return color[num];
+};
+
+//For the h1, change the color of the text when the user releases any key..
+var myInput = document.querySelector(".keydownExample");
+myTitle.addEventListener("keyup", function(e) {
+  myTitle.style.color = randomColor(0, color.length -1);
+});
+//Not Tough Enough? Try redirecting the user's browser to facebook when the click anywhere on the page.
+
+
+
 
 //-------------------------take home section------------------------------
-
   //Employ a function that accepts two arguments: temperature and scale (either celcius or fahrenheit).
 var fToC = prompt('Enter a number to convert from Fahrenheit to Celcius.', '33');
   function fToC(fahrenheit)
