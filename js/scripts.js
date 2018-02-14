@@ -74,16 +74,23 @@ body.appendChild(newImg);
     // appendChild()
     // .innerText
     // if statements or switch statements(lots of ways to do the same thing!)
-
-
-
-
-
+ for (let i = 0; i <= 100; i++) {
+   //this goes first because it will just console.log one of the conditions
+    if(i % 3 === 0 && i % 5 === 0) {
+        console.log('FizzBuzz');
+   } else if (i % 5 === 0) {
+        console.log('Buzz');
+   } else if(i % 3 === 0 ) {
+        console.log('Fizz');
+   } else {
+     console.log(i); //default if other things aren't true
+   }
+ }
 
 
 //----------------------TAKE HOME SECTION-------------------------
 // When the user clicks a button, prompt them for the a title.
-
+  
 // Put that title into an h1 that is centered on the page.
 
 // Ask the user to write a few sentences about what they did today.
